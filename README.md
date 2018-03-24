@@ -37,7 +37,7 @@ class cMyTreeData {
 
 }  // class cMyTreeData
 
-class cMyTreeNode extends \\rstoetter\\cbalancedbinarytree\\cBalancedBinaryTreeNode {
+class cMyTreeNode extends \rstoetter\cbalancedbinarytree\cBalancedBinaryTreeNode {
 
     function __construct( string $data_1, int $data_2 ){
     
@@ -57,7 +57,7 @@ class cMyTreeNode extends \\rstoetter\\cbalancedbinarytree\\cBalancedBinaryTreeN
 
 }   // class cMyTreeNode
 
-class cMyTree extends \\rstoetter\\cbalancedbinarytree\\cBalancedBinaryTree {
+class cMyTree extends \rstoetter\cbalancedbinarytree\cBalancedBinaryTree {
 
     function __construct( ){
     
@@ -67,14 +67,38 @@ class cMyTree extends \\rstoetter\\cbalancedbinarytree\\cBalancedBinaryTree {
     }   // function __construct( )
 
 	public function MyInsert( string $data_1, int $data_2 ) {
+	
+        // inserts a new node in the tree
         
         $obj_new = new cMyTreeNode( $data_1, $data_2 );
             
         $this->InsertNode( $obj_new );
+        
+        // maybe you have to rebalance the tree now
+        // NOTE: if you are filling the tree with a bunch of data, then you can rebalance the tree after reading all objects, too
+        
+        $this->RebalanceTree( );
 		
 	}  // function MyInsert( )
+	
+    public function MySearch( string $key ) {
+    
+        // returns an object of type cMyTreeData or false    
+    
+        $obj_found = $this->SearchByKey( $key );
+        // $obj_found is of type cBalancedBinaryTreeNode
+        
+        if ( $obj_found !== false ) {
+            return $obj_found->GetData( );
+        }
+        
+        return false;
+    
+    }   // function MySearch( )
+	
 
 }   // class cMyTree
+
 
 
 ```

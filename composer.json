@@ -1,0 +1,25 @@
+
+{
+    "name": "rstoetter/cbalancedbinarytree-php",
+    "description": "The repository rstoetter\\cbalancedbinarytree-php implements the class cBalancedBinaryTree in PHP which is a balanced binary tree.",
+    "license": "MIT",
+    "keywords": ["php","class","balanced","binary","tree"],
+    "authors": [
+        {
+            "name": "Rainer Stötter",
+            "email": "rstoetter@users.sourceforge.net"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "rstoetter\cbalancedbinarytree-php\": "src"
+        }
+    }
+}
+
