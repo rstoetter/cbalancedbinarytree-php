@@ -157,3 +157,20 @@ if ( $obj !== false ) {
 
 
 ```
+
+
+  = Installation
+
+This project assumes you have composer installed. Simply add:
+
+"require" : {
+
+    "rstoetter/cbalancedbinarytree-php" : ">=1.0.0"
+
+}
+
+to your composer.json, and then you can simply install with:
+
+composer install
+
+
