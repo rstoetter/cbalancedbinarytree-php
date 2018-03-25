@@ -34,7 +34,7 @@ namespace rstoetter\cbalancedbinarytree;
   *     
   *         // calculate the unique sort key of the Tree
   *
-  *         return "{$data_1}-{$data_2}";
+  *         return "{$this->m_data_1}-{$this->m_data_2}";
   *
   *     }   // function GetKey( )
   *     
@@ -340,7 +340,7 @@ class cBalancedBinaryTreeNode {
   *     
   *         // calculate the unique sort key of the Tree
   *
-  *         return "{$data_1}-{$data_2}";
+  *         return "{$this->m_data_1}-{$this->m_data_2}";
   *
   *     }   // function GetKey( )
   *     
