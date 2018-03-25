@@ -95,9 +95,64 @@ class cMyTree extends \rstoetter\cbalancedbinarytree\cBalancedBinaryTree {
         return false;
     
     }   // function MySearch( )
+    
+    public function PrintTree( ) : string {
+    
+        // return the ordered keys of the Tree as a string
+    
+        parent::_PrintTree( $this->m_root );
+        
+    }   // function PrintTree( )
+    
+    protected function _TraverseInOrder( $tree ) {
+    
+        // internal method to recurse the tree in order beginning with $tree and do something with each node
+    
+        if ( is_null( $tree ) ) { return ; }
+        
+        //
+ 
+        $this->_TraverseInOrder( $tree->GetLeft( ) ); 
+        
+        //
+        
+        $obj = $tree->GetData( );
+        
+        //
+        // do something with $obj, which is of the type cMyTreeData
+        //
+            
+        //
+        
+        $this->_TraverseInOrder( $tree->GetRight( ) );         
+    
+    }   // function _TraverseInOrder( )
+    
+    
+    public function TraverseInOrder( ) {
+    
+        // traverse the whole tree in ordered order
+    
+        // recurse the tree beginning with the root pointer
+        $this->_TraverseInOrder( $this->m_root );
+                
+    }   // function TraverseInOrder( )
+    
+    
+    
 	
 
 }   // class cMyTree
+
+$my_tree = new cMyTree( );
+$my_tree->MyInsert( 'data 1', 1 );
+$my_tree->MyInsert( 'data 2', 2 );
+$my_tree->MyInsert( 'data 3', 3 );
+
+$obj = $my_tree->MySearch( 'data 1' );
+if ( $obj !== false ) {
+    // do something withe $obj
+}
 
 
 
