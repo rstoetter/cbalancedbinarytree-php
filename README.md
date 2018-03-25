@@ -159,7 +159,7 @@ if ( $obj !== false ) {
 ```
 
 
-  = Installation
+## Installation
 
 This project assumes you have composer installed. Simply add:
 
@@ -172,5 +172,9 @@ This project assumes you have composer installed. Simply add:
 to your composer.json, and then you can simply install with:
 
 composer install
+
+## More information
+
+See the [project wiki](https://github.com/rstoetter/cbalancedbinarytree-php/wiki) for more information.
 
 
