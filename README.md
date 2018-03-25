@@ -29,7 +29,7 @@ class cMyTreeData {
     
         // calculate the unique sort key for the Tree
 
-        return "{$data_1}-{$data_2}";
+        return "{$this->m_data_1}-{$this->m_data_2}";
 
     }   // function GetKey( )
     
