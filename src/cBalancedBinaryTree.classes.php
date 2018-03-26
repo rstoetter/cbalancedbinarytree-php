@@ -85,7 +85,7 @@ class cBalancedBinaryTreeNode {
       *
       */
 
-    protected   $m_version = '1.0';
+    public static  $m_version = '1.0.0';
     
     /**
       * A pointer to the parent node of the actual node
@@ -146,7 +146,7 @@ class cBalancedBinaryTreeNode {
     
     /**
       *
-      * The constructor of the class cBinaryTreeNodeData
+      * The constructor of the class cBalancedBinaryTreeNode
       *
       * see the description of class cBinaryTreeNode for an example
       *
@@ -473,7 +473,7 @@ class cBalancedBinaryTree {
       *
       */
 
-    protected   $m_version = '1.0';
+    public static  $m_version = '1.0.0';
 
 
     /**
