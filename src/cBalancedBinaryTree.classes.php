@@ -572,7 +572,7 @@ class cBalancedBinaryTree {
      *
      */     
  
-    public function _RebalanceTree($tree)
+    protected function _RebalanceTree($tree)
     {
     
         // TODO: rebalance without using an ordered array
